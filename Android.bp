@@ -5,7 +5,7 @@ cc_library_static {
         "-DHAVE_CONFIG_H",
         "-Wno-implicit-function-declaration",
     ],
-    include_dirs: [
+    export_include_dirs: [
         "xz_config",
         "src/common",
         "src/liblzma/api",
@@ -17,9 +17,6 @@ cc_library_static {
         "src/liblzma/rangecoder",
         "src/liblzma/simple",
         "src/liblzma",
-    ],
-    export_include_dirs: [
-        "src/liblzma/api",
     ],
     srcs: [
         "src/common/tuklib_cpucores.c",
